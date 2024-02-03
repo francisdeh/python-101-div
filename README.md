@@ -1,13 +1,17 @@
 # Python 101
-### Install [Python 3.10.0](https://www.python.org/downloads/) or later
-### You could use an online python [IDE](https://www.python.org/downloads/)
-### Install VSCode or PyCharm Community Edition [here](https://www.jetbrains.com/products/compare/?product=pycharm&product=pycharm-ce)
+An intro to python for a DIV session
 
-### Check the python version
-``python --version``
-### Create and activate the Python environment
-### Read more about creating envs [here](https://python.land/virtual-environments/virtualenv)
+* Install [Python 3.10.0](https://www.python.org/downloads/) or later
+* You could use an online python [IDE](https://www.python.org/downloads/)
+* Install VSCode or PyCharm Community Edition [here](https://www.jetbrains.com/products/compare/?product=pycharm&product=pycharm-ce)
+
+#### Check the python version
+```shell
+python --version
 ```
+#### Create and activate the Python environment
+ Read more about creating envs [here](https://python.land/virtual-environments/virtualenv)
+```shell
 python -m venv .env
 
 # on macOS and Linux:
@@ -16,14 +20,15 @@ source .env/bin/activate
 # on Windows:
 .env\Scripts\activate.bat
 ```
-### To run a python program, use the command below with the filename
-```
+
+#### To run a python program, use the command below with the filename
+```shell
 python main.py
 ```
 
 ### The Zen of python
-### Read about it [here](https://peps.python.org/pep-0020/)
-```
+Read about it [here](https://peps.python.org/pep-0020/)
+```shell
 # inside the python shell. 
 import this
 

@@ -54,9 +54,35 @@ say_hello()
 def add(x: int, y: int) -> int:
     return x + y
 
-sum = add(2, 3)
+sum = add(3, 2)
 print(sum)
 # loops
+alphabets = ["a", "b", "c"]
+for alphabet in alphabets:
+    print(alphabet)
+
+for value in [1, 4, 5]:
+    print(value)
+# const name = "james" in js
+# `hello ${name}`
+for x in range(0, 10, 2):
+    print(f"counting {x}")
+
+person2 = {"name": "John", "age": 23, "is_active": True}
+for key, value in person2.items():
+    print(f"{key} => {value}")
+
+is_running = True
+while is_running:
+    print("this is running forever")
+    is_running = False
+
+if is_running:
+    print("is running is true")
+# elif is_running and is_raining:
+    # print("it")
+else:
+    print("is running is false")
 
 # dataclasses
 
