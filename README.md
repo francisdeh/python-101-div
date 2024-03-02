@@ -53,3 +53,27 @@ If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 ```
+
+### Seting up FastAPI
+- [FastAPI](https://fastapi.tiangolo.com/)
+
+```py
+pip install fastapi
+
+# display installed packages
+pip freeze
+
+pip freeze > requirements.txt
+
+# install packages from requirements file
+pip install -r requirements.txt
+
+Run fastapi app
+uvicorn server:app
+
+# to watch changes
+uvicorn server:app --reload
+
+# access the fastapi docs from here
+http://127.0.0.1:8000/docs
+```

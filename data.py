@@ -67,3 +67,6 @@ print(student.programme)
 student.programme = "IT"
 print(student.programme)
 student.greet()
+
+print(__name__)
+print(__file__)
