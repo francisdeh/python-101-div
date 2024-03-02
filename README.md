@@ -68,7 +68,7 @@ pip freeze > requirements.txt
 # install packages from requirements file
 pip install -r requirements.txt
 
-Run fastapi app
+# run fastapi app
 uvicorn server:app
 
 # to watch changes
