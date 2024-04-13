@@ -1,7 +1,12 @@
 from fastapi import FastAPI, HTTPException, status
 import uvicorn
+from pydantic import BaseModel, HttpUrl
 
 app = FastAPI()
+
+class CatCreateRequest(BaseModel):
+    name: str
+    url: HttpUrl
 
 cats_db = [
     {
@@ -42,6 +47,22 @@ def get_a_cat_by_id(id: int) -> dict:
 
 # todo: explain exceptions in details
 # todo: pydantic base model class
+@app.post("/cats")
+def create_a_cat(cat_request: CatCreateRequest) -> dict:
+    previous_cat_id = len(cats_db)
+    cat = {
+        "id": previous_cat_id + 1,
+        "name": cat_request.name,
+        "url": cat_request.url
+    }
+
+    cats_db.append(cat)
+    # todo: add status code
+    # todo: have a cat class
+
+    return cat
+
+
 
 
 if __name__ == "__main__":
